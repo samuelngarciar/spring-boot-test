@@ -9,13 +9,13 @@ Retornando un Json con la siguiente forma:
 
 
 Si se quiere correr en Docker
-1# Compilar el docker en la carpeta donde esta el fichero: Dockerfile
-docker build -t spring/boot/microservice .
-2# Verificar la compilacion
-docker images
-3# Correr el ms en background en el puerto 8081
-docker run -d -p 8081:8080 spring/boot/microservice:latest
-4# Probar
-curl http://localhost:8081/ms/test?input=Nice | jq '.'
+####1 Compilar el docker en la carpeta donde esta el fichero: Dockerfile<br>
+docker build -t spring/boot/microservice .<br>
+####2 Verificar la compilacion<br>
+docker images<br>
+####3 Correr el ms en background en el puerto 8081<br>
+docker run -d -p 8081:8080 spring/boot/microservice:latest<br>
+####4 Probar<br>
+curl http://localhost:8081/ms/test?input=Nice | jq '.'<br>
 ![image](https://github.com/samuelngarciar/spring-boot-test/assets/84947793/3a766789-0089-4d1c-a838-07ef0d773d7f)
 
