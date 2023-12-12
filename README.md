@@ -5,5 +5,17 @@ Abre en el puerto: 8080, pero esta configuracion puede ser cambiada en el ficher
 Las opciones de acceso mediante curl seria asi: curl -s http://localhost:8080/ms/test?input=Nice
 Retornando un Json con la siguiente forma:
 
-![image](https://github.com/samuelngarciar/spring-boot-test/assets/84947793/2825075d-c844-4dd5-94cb-b2d41db0d053)
+![image](https://github.com/samuelngarciar/spring-boot-test/assets/84947793/8cdf2076-9429-4e0e-952d-894d82a03c8b)
+
+
+Si se quiere correr en Docker
+1# Compilar el docker en la carpeta donde esta el fichero: Dockerfile
+docker build -t spring/boot/microservice .
+2# Verificar la compilacion
+docker images
+3# Correr el ms en background en el puerto 8081
+docker run -d -p 8081:8080 spring/boot/microservice:latest
+4# Probar
+curl http://localhost:8081/ms/test?input=Nice | jq '.'
+![image](https://github.com/samuelngarciar/spring-boot-test/assets/84947793/3a766789-0089-4d1c-a838-07ef0d773d7f)
 
